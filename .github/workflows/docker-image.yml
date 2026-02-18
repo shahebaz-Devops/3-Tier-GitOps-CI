@@ -162,7 +162,7 @@ jobs:
       - name: Checkout CD repo
         uses: actions/checkout@v4
         with:
-          repository: shahebaz-Devops/3-Tier-GitOps
+          repository: shahebaz-Devops/3-Tier-GitOps-CD
           ref: main
           token: ${{ secrets.CD_REPO_TOKEN }} # create the token on github and add it to secrets. to access one repo from another therefore.
           path: cd
