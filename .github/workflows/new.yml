@@ -136,7 +136,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run Trivy image scan for backend
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@master
         with:
           scan-type: image
           image-ref: shahebazdocker/backend:${{ env.IMAGE_TAG }}
@@ -147,7 +147,7 @@ jobs:
           severity: CRITICAL,HIGH
 
       - name: Run Trivy image scan for frontend
-        uses: aquasecurity/trivy-action@0.28.0
+        uses: aquasecurity/trivy-action@master
         with:
           scan-type: image
           image-ref: shahebazdocker/frontend:${{ env.IMAGE_TAG }}
